@@ -47,7 +47,7 @@ def editTask(tasks):
 
 def addTask(tasks):
     task = {
-        "id": len(tasks) + 1,
+        "id": max(task["id"]+ 1 for task in tasks),
         "title": input("Enter a new Title: "),
         "description": input("Enter a description: "),
         "status": "Todo",
