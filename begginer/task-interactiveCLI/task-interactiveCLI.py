@@ -4,20 +4,20 @@ import os
 from InquirerPy import prompt 
 
 ################## FUNCTIONS ################# 
-def loadJson():
-    checkJsonExist()
-    with open('begginer/task-interactiveCLI/tasks.json') as f:
+def loadJson(TASK_FILE):
+    checkJsonExist(TASK_FILE)
+    with open(TASK_FILE) as f:
         tasks = json.load(f)
         return tasks
     
-def checkJsonExist():
-    if not os.path.exists('begginer/task-interactiveCLI/tasks.json'):
-       with open('begginer/task-interactiveCLI/tasks.json', "x" ) as f:
+def checkJsonExist(TASK_FILE):
+    if not os.path.exists(TASK_FILE):
+       with open(TASK_FILE, "x" ) as f:
            f.write('[]')
 
-def saveJson(tasks):
+def saveJson(tasks, TASK_FILE):
     
-    with open('begginer/task-interactiveCLI/tasks.json', 'w') as f:
+    with open(TASK_FILE, 'w') as f:
         json.dump(tasks,f, indent=3)
 
 def printTask(task):
@@ -42,7 +42,6 @@ def editTask(tasks):
             task["updatedAt"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
             printTask(task)
-            saveJson(tasks)
             break
 
 def addTask(tasks):
@@ -63,9 +62,7 @@ def addTask(tasks):
     
     printTask(task)
     
-    tasks.append(task)
-
-    saveJson(tasks)    
+    tasks.append(task) 
 
 def listTask(tasks):
     for task in tasks:
@@ -75,15 +72,14 @@ def listTask(tasks):
 
 def deleteTask(tasks):
     print("Which task you wish to delete?")
-    print("RAW Tasks:", tasks)
     for task in tasks:
         print(f"{task['id']}: {task['title']} - {task['description']}")
     choice = int(input("->"))
     for task in tasks:
         if task["id"] == choice:
 
-            tasks.pop(choice - 1)
-            saveJson(tasks)
+            tasks.remove(task)
+            print("\n--Task deleted!--\n")
 
             break
 
@@ -99,7 +95,7 @@ def updateTask(tasks):
                 {
                     "type": "list",
                     "message": "What's the status of the task?",
-                    "choices": ["Pending", "Doing", "Done", "Abandoned"],
+                    "choices": ["Todo", "In-progress", "Done", "Abandoned"],
                 }
                 ]
             answers = prompt(questions)
@@ -108,10 +104,9 @@ def updateTask(tasks):
             task["updatedAt"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
             printTask(task)
-            saveJson(tasks)
             break
 
-def runLoop(choice, tasks):
+def runLoop(choice, tasks, TASK_FILE):
      
     match choice:
         case '1':
@@ -127,11 +122,14 @@ def runLoop(choice, tasks):
         case '9':
             print("Bye.")
             return
+    saveJson(tasks, TASK_FILE)
+        
 
 def main():
-
+    
+    TASK_FILE = 'begginer/task-interactiveCLI/tasks.json'
+    tasks = loadJson(TASK_FILE)
     #################### MAIN LOOP ####################
-    tasks = loadJson()
 
     print("\nWelcome to Task Tracker CLI\n")
 
@@ -145,7 +143,7 @@ def main():
         "9. Exit\n"
         "->")
         
-        runLoop(choice, tasks)
+        runLoop(choice, tasks, TASK_FILE)
 
 if __name__ == "__main__":
     main()
