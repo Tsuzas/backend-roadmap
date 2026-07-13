@@ -23,8 +23,8 @@ This repository follows the Backend Roadmap and project list created by @nilbuil
 
 | Level         | Project                  | Status      |
 | ------------- | ------------------------ | --------    |
-|  Beginner     | Task Tracker CLI         |  WIP        |
-|               | GitHub User Activity     |  Waiting... |
+|  Beginner     | Task Tracker CLI         |  DONE       |
+|               | GitHub User Activity     |  WIP...     |
 |  Intermediate | Not chosen               |  Waiting... |
 |  Advanced     | Not chosen               |  Waiting... |
 

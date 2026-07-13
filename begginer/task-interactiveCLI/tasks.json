@@ -1,0 +1,34 @@
+[
+   {
+      "id": 1,
+      "title": "Complete Python assignment",
+      "description": "Finish the Python assignment due tomorrow.",
+      "status": "Abandoned",
+      "createdAt": "2026-07-10 00:18:08",
+      "updatedAt": "2026-07-10 00:18:08"
+   },
+   {
+      "id": 2,
+      "title": "Read a book",
+      "description": "Read at least 50 pages of your chosen book.",
+      "status": "Abandoned",
+      "createdAt": "2026-07-10 00:18:08",
+      "updatedAt": "2026-07-10 00:18:08"
+   },
+   {
+      "id": 3,
+      "title": "Call mom",
+      "description": "Make a phone call to your mother.",
+      "status": "Abandoned",
+      "createdAt": "2026-07-10 00:18:08",
+      "updatedAt": "2026-07-13 17:06:40"
+   },
+   {
+      "id": 4,
+      "title": "potato",
+      "description": "somato",
+      "status": "Abandoned",
+      "createdAt": "2026-07-13 15:54:17",
+      "updatedAt": "2026-07-13 17:12:43"
+   }
+]
