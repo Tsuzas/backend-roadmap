@@ -1,6 +1,7 @@
+import os
+import sys
 import json
 from datetime import datetime
-import os
 from InquirerPy import prompt 
 
 ################## FUNCTIONS ################# 
@@ -107,7 +108,6 @@ def updateTask(tasks):
             break
 
 def runLoop(choice, tasks, TASK_FILE):
-     
     match choice:
         case '1':
             addTask(tasks)
@@ -120,8 +120,8 @@ def runLoop(choice, tasks, TASK_FILE):
         case '5':
             updateTask(tasks)
         case '9':
-            print("Bye.")
-            return
+            print("-- Bye! --")
+            sys.exit()
     saveJson(tasks, TASK_FILE)
         
 
@@ -129,6 +129,8 @@ def main():
     
     TASK_FILE = 'begginer/task-interactiveCLI/tasks.json'
     tasks = loadJson(TASK_FILE)
+    
+    
     #################### MAIN LOOP ####################
 
     print("\nWelcome to Task Tracker CLI\n")
