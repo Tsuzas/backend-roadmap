@@ -127,7 +127,7 @@ def runLoop(choice, tasks, TASK_FILE):
 
 def main():
     
-    TASK_FILE = 'begginer/task-interactiveCLI/tasks.json'
+    TASK_FILE = "tasks.json"
     tasks = loadJson(TASK_FILE)
     
     
