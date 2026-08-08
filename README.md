@@ -6,8 +6,6 @@ This repository contains a collection of projects I am building to strengthen my
 
 Instead of focusing on one large application from the beginning, I am completing multiple projects of various intent and increasing complexity. Each project introduces new concepts, technologies, and design patterns while reinforcing previous knowledge.
 
-The goal is not simply to make each project work, but to build them using clean code, good architecture, proper documentation, testing, and best practices.
-
 This repository follows the Backend Roadmap and project list created by @nilbuild on https://roadmap.sh/ .
 
 ## Objectives
@@ -24,7 +22,8 @@ This repository follows the Backend Roadmap and project list created by @nilbuil
 | Level         | Project                  | Status      |
 | ------------- | ------------------------ | --------    |
 |  Beginner     | Task Tracker CLI         |  DONE       |
-|               | GitHub User Activity     |  WIP...     |
+|               | GitHub User Activity     |  DONE       |
+|               | Expense Tracker          |  WIP...     |
 |  Intermediate | Not chosen               |  Waiting... |
 |  Advanced     | Not chosen               |  Waiting... |
 
@@ -39,8 +38,6 @@ Currently using:
 
 ## Purpose
 
-This repository serves as a record of my progress as I continue learning Software Engineering. Each completed project represents a step toward writing cleaner, more maintainable, and more scalable software.
-
-Every project is an opportunity to learn something new or improve something on which I assumed I knew, and become a better developer.
+This repository serves as a record of my progress as I continue learning Software Engineering with the sole usage of documentation, to furhter help me develop my logic and thinking skills.
 
 
