@@ -23,7 +23,9 @@ This repository follows the Backend Roadmap and project list created by @nilbuil
 | ------------- | ------------------------ | --------    |
 |  Beginner     | Task Tracker CLI         |  DONE       |
 |               | GitHub User Activity     |  DONE       |
-|               | Expense Tracker          |  WIP...     |
+|               | Expense Tracker          |  DONE       |
+|               | Number Guessing Game     |  DONE       |
+|               | Unit Converter           |  WIP...     |
 |  Intermediate | Not chosen               |  Waiting... |
 |  Advanced     | Not chosen               |  Waiting... |
 
